@@ -12,11 +12,11 @@ This repository contains code for our paper (submitted to ICDL 2025):
 Inspired by infant visual development, this project explores how early exposure to blur and instance-level learning affect robustness to blur in convolutional neural networks (CNNs).  
 We evaluate a **blurry-to-clear training curriculum** across five datasets that vary in domain and classification level:
 
-- **Faces** (instance-level)
+- **Faces**
 - **Toybox (Instance-level)**
 - **Toybox (Category-level)**
-- **ImageNet-12** (category-level)
-- **ImageNet-100** (category-level)
+- **ImageNet-12**
+- **ImageNet-100**
 
 Each dataset is used to train three models:
 1. **Clear-only**
