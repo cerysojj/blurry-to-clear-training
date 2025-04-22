@@ -57,12 +57,11 @@ Preprocessing is handled in `src/datasets.py`.
 
 ## Key Findings
 
-- **Blurry-to-clear training improves robustness to blur**, especially for **faces** and **object instances**.
-- **Instance-level learning** is more effective than category-level learning for developing blur-invariant representations.
-- **Face-trained models** show the strongest robustness, suggesting a mix of instance-level and domain-specific effects.
-- **Receptive field analysis** shows increased spatial integration under blurry-to-clear training, especially in instance-level tasks.
+- We replicate and extend the findings of Jang & Tong (2021), using five datasets to disentangle the effects of **domain (faces vs. objects)** and **classification level (instance vs. category)** on blur robustness under a blurry-to-clear training curriculum.
+- **Instance-level training**, combined with a **blurry-to-clear curriculum**, substantially improves CNN **robustness to blur** compared to category-level training.
+- **Face-trained models** achieve the highest robustness overall, suggesting combined effects from domain-specific face training and general instance-level training.
+- **Receptive field analyses** reveal that blurry-to-clear training promotes broader spatial integration, especially in face and instance-level models — a potential mechanism for enhanced blur robustness.
 
 ---
 
-For questions or collaboration, feel free to get in touch:  
-c.o.j.jenkins@sms.ed.ac.uk
+If you have any question feel free to send me an email at c.o.j.jenkins@sms.ed.ac.uk.
