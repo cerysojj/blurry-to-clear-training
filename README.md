@@ -64,7 +64,7 @@ Details and preprocessing steps are handled in `src/datasets.py`.
 - **Instance-level training** with blurry-to-clear progression yields better robustness to blur than category-level training.
 - **Face-trained models** show the highest robustness, suggesting domain-specific specialization.
 - **Blurry-to-clear training** increases spatial integration, as seen in receptive field size growth.
-- 
+
 ---
 
 For questions, feel free to reach out: c.o.j.jenkins@sms.ed.ac.uk
