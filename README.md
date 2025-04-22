@@ -50,7 +50,7 @@ Toybox: https://aivaslab.github.io/toybox/
 
 FaceScrub: https://exposing.ai/face_scrub/
 
-ImageNet-12: Subsets curated from ImageNet and MS-COCO
+ImageNet-12: Category matched to Toybox, curated from ImageNet and MS-COCO
 
 ImageNet-100: https://www.kaggle.com/datasets/ambityga/imagenet100
 
