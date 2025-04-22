@@ -31,7 +31,7 @@ Each dataset is used to train three models:
 - `notebooks/figures/`: Notebooks to generate results and paper figures.
 - `src/`: Core scripts for dataset loading, model definitions, and utility functions.
 
-All notebooks are designed to run in **Google Colab** with **A100 GPUs**. No installation required.
+All notebooks are designed to run in Google Colab with A100 GPUs. No installation required.
 
 ---
 
