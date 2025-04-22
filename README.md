@@ -1,24 +1,22 @@
 # blurry-to-clear-training
 
-**Curriculum-based CNN training to study blur robustness across faces vs. objects and instance vs. category classification.**  
+We train CNNs with a blurry-to-clear curriculum, inspired by early human visual development, and examine how domain (faces vs. objects) and classification level (instance vs. category) impact blur robustness and receptive field properties.
 
 This repository accompanies our paper submitted to ICDL 2025, currently under review:
 
 **_“Learning from Faces and Favourite Toys: Effects of Domain and Classification Level on Robustness”_**  
 *(Jenkins, Sanyal, Michelson & Kunda, 2025 — under submission)*
 
-We train CNNs with a blurry-to-clear schedule, inspired by early human visual development, and examine how domain (faces vs. objects) and classification level (instance vs. category) impact blur robustness and receptive field properties.
-
 ---
 
 ## Overview
 
 We evaluate the effect of blurry-to-clear training on five datasets:
-- **Faces** (FaceScrub) – Instance-level
-- **Toybox (Instance-level)** – Object individuation
-- **Toybox (Category-level)** – Object categorisation
-- **ImageNet-12** – Compact category-level benchmark
-- **ImageNet-100** – Broader category-level dataset
+- **Faces**
+- **Toybox (Instance-level)**
+- **Toybox (Category-level)**
+- **ImageNet-12**
+- **ImageNet-100**
 
 For each dataset, we train three models:
 1. **Clear-only**
@@ -29,7 +27,7 @@ For each dataset, we train three models:
 
 ## How to Run
 
-All training and evaluation is handled through Jupyter notebooks.
+All training and evaluation is handled via Jupyter notebooks, organized into two folders: `models/` for training and `figures/` for generating results. All notebooks are designed to run in Google Colab with A100 GPUs.
 
 ### Model Training
 
@@ -38,38 +36,35 @@ All training and evaluation is handled through Jupyter notebooks.
 
 ### Recreate Paper Figures
 
-`notebooks/figures/` generates:
-- Accuracy vs. blur level plots
-- Accuracy ratio comparisons
+`notebooks/figures/` generates figures for:
+- Test accuracy results
+- Test accuracy across training stages
 - Receptive field size analyses
-
-Example:
-- `fig4_accuracy_vs_blur.ipynb`
-- `fig5_training_stage_accuracy.ipynb`
+- Spatial frequency analysis
 
 ---
 
 ## Datasets
 
-FaceScrub: https://github.com/happynear/facescrub
+Toybox: https://aivaslab.github.io/toybox/
 
-Toybox: https://github.com/maithilee/toybox
+FaceScrub: https://exposing.ai/face_scrub/
 
 ImageNet-12: Subsets curated from ImageNet and MS-COCO
 
-ImageNet-100: 
+ImageNet-100: https://www.kaggle.com/datasets/ambityga/imagenet100
 
 Details and preprocessing steps are handled in `src/datasets.py`.
 
 ---
 
 ## Results Summary
-Key findings include:
 
-- Instance-level training leads to better robustness under blur than category-level training
-- Face-trained models are most robust, likely due to domain-specific processing
-- Blurry-to-clear training promotes broader spatial integration (measured via receptive field size)
-
+- We disentangle the effects of **domain (faces vs. objects)** and **classification level (instance vs. category)** using 5 datasets.
+- **Instance-level training** with blurry-to-clear progression yields better robustness to blur than category-level training.
+- **Face-trained models** show the highest robustness, suggesting domain-specific specialization.
+- **Blurry-to-clear training** increases spatial integration, as seen in receptive field size growth.
+- 
 ---
 
 For questions, feel free to reach out: c.o.j.jenkins@sms.ed.ac.uk
