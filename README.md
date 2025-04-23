@@ -10,6 +10,7 @@ This repository contains code for our paper (submitted to ICDL 2025):
 ## Overview
 
 Inspired by infant visual development, this project explores how early exposure to blur and instance-level learning affect robustness to blur in convolutional neural networks (CNNs).  
+
 We evaluate a **blurry-to-clear training curriculum** across five datasets that vary in domain and classification level:
 
 - **Faces**
